@@ -1,5 +1,6 @@
 
 import { Facebook, Instagram, Twitter, Phone, Mail, MapPin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 
@@ -10,12 +11,12 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <div className="flex items-center gap-2">
+            <Link to="/" className="flex items-center gap-2">
               <div className="w-8 h-8 rounded-lg gradient-purple flex items-center justify-center">
                 <span className="text-white font-bold text-lg">إ</span>
               </div>
               <span className="text-xl font-bold text-gradient">متجر إبتكار</span>
-            </div>
+            </Link>
             <p className="text-muted-foreground text-sm">
               متجرك الإلكتروني المفضل للحصول على أفضل المنتجات بأسعار منافسة وخدمة متميزة
             </p>
@@ -36,11 +37,11 @@ export function Footer() {
           <div className="space-y-4">
             <h3 className="font-semibold">روابط سريعة</h3>
             <ul className="space-y-2 text-sm">
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">عن المتجر</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">اتصل بنا</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">الأسئلة الشائعة</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">شروط الاستخدام</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">سياسة الخصوصية</a></li>
+              <li><Link to="/about" className="text-muted-foreground hover:text-primary transition-colors">عن المتجر</Link></li>
+              <li><Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">اتصل بنا</Link></li>
+              <li><Link to="/products" className="text-muted-foreground hover:text-primary transition-colors">جميع المنتجات</Link></li>
+              <li><Link to="/terms" className="text-muted-foreground hover:text-primary transition-colors">شروط الاستخدام</Link></li>
+              <li><Link to="/privacy" className="text-muted-foreground hover:text-primary transition-colors">سياسة الخصوصية</Link></li>
             </ul>
           </div>
 
@@ -48,11 +49,11 @@ export function Footer() {
           <div className="space-y-4">
             <h3 className="font-semibold">خدمة العملاء</h3>
             <ul className="space-y-2 text-sm">
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">تتبع الطلب</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">الإرجاع والاستبدال</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">طرق الدفع</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">التوصيل والشحن</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">الضمان</a></li>
+              <li><Link to="/orders" className="text-muted-foreground hover:text-primary transition-colors">تتبع الطلب</Link></li>
+              <li><Link to="/terms" className="text-muted-foreground hover:text-primary transition-colors">الإرجاع والاستبدال</Link></li>
+              <li><Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">طرق الدفع</Link></li>
+              <li><Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">التوصيل والشحن</Link></li>
+              <li><Link to="/terms" className="text-muted-foreground hover:text-primary transition-colors">الضمان</Link></li>
             </ul>
           </div>
 
